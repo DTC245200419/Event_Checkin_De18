@@ -1,0 +1,28 @@
+@host = http://localhost:5018
+
+### Kiểm tra dịch vụ
+GET {{host}}/
+
+### 1) Danh sách sự kiện + số chỗ còn lại
+GET {{host}}/events
+
+### 2) Chi tiết sự kiện 1
+GET {{host}}/events/1
+
+### 3) Đăng ký tham dự sự kiện 1 (sinh mã đăng ký)
+POST {{host}}/events/1/registrations
+Content-Type: application/json
+
+{
+  "participantName": "Nguyen Van A",
+  "email": "a@gmail.com"
+}
+
+### 6) Danh sách người tham dự của sự kiện 1
+GET {{host}}/events/1/registrations
+
+### 4) Hủy đăng ký (thay <id> bằng Id trả về khi đăng ký)
+DELETE {{host}}/registrations/<id>
+
+### 5) Check-in (thay <id> bằng Id trả về khi đăng ký)
+POST {{host}}/registrations/<id>/checkin

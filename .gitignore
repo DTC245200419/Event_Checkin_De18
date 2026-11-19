@@ -1,0 +1,25 @@
+# .NET build output
+bin/
+obj/
+out/
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio / Rider / VS Code
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Rider
+*.sln.iml
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs & local env
+*.log
+*.env
+appsettings.*.Local.json
